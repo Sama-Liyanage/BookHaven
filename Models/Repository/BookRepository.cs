@@ -1,0 +1,94 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using BookHeaven.Models.Dto;
+using BookHeaven.Models.Entity;
+using BookHeaven.Models.Repository.Interfaces;
+using Microsoft.EntityFrameworkCore;
+
+namespace BookHeaven.Models.Repository
+{
+    public class BookRepository : IBookRepository
+    {
+        private readonly BookHavenDbContext _context;
+
+        public BookRepository(BookHavenDbContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<IEnumerable<Book>> GetAllBooksAsync()
+        {
+            return await _context.Books.Include(b => b.Supplier).ToListAsync();
+        }
+
+        public async Task<Book?> GetBookByIdAsync(Guid id)
+        {
+            return await _context.Books.Include(b => b.Supplier).FirstOrDefaultAsync(b => b.Id == id);
+        }
+
+        public async Task<IEnumerable<Book>> SearchBooksAsync(string keyword)
+        {
+            return await _context.Books
+                .Where(b => b.Title.Contains(keyword) || b.Author.Contains(keyword) || b.Genre.Contains(keyword))
+                .Include(b => b.Supplier)
+                .ToListAsync();
+        }
+
+        public async Task AddBookAsync(Book book)
+        {
+            _context.Books.Add(book);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<int?> UpdateBookAsync(Book book)
+        {
+            var existingBook = await _context.Books.FindAsync(book.Id);
+            if (existingBook == null)
+            {
+                return null;
+            }
+
+            _context.Entry(existingBook).CurrentValues.SetValues(book);
+
+            return await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteBookAsync(Guid id)
+        {
+            var book = await _context.Books.FindAsync(id);
+            if (book != null)
+            {
+                _context.Books.Remove(book);
+                await _context.SaveChangesAsync();
+            }
+        }
+
+        public async Task<IEnumerable<Book>> GetBooksBySupplierAsync(Guid supplierId)
+        {
+            return await _context.Books
+                .Where(b => b.SupplierId == supplierId)
+                .Include(b => b.Supplier)
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<BookInventory>> GetInventoryAsync()
+        {
+            return await _context.Books
+                .OrderByDescending(b => b.Quantity)
+                .Select(b => new BookInventory
+                {
+                    BookId = b.Id,
+                    Title = b.Title,
+                    Stock = b.Quantity
+                })
+                .ToListAsync();
+        }
+
+        Task IBookRepository.UpdateStockAsync(Guid bookId, int newQuantity)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
