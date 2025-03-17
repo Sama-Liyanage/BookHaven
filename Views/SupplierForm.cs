@@ -60,7 +60,7 @@ namespace BookHeaven.Views
             // labelName
             // 
             labelName.Font = new Font("Arial Rounded MT Bold", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelName.Location = new Point(236, 9);
+            labelName.Location = new Point(206, 9);
             labelName.Name = "labelName";
             labelName.Size = new Size(543, 66);
             labelName.TabIndex = 9;
@@ -306,7 +306,9 @@ namespace BookHeaven.Views
             Controls.Add(txtName);
             Controls.Add(btnAddBooks);
             Controls.Add(dataGridViewSuppliers);
+            Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "SupplierForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Book List";
             Load += SupplierForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewSuppliers).EndInit();
@@ -443,7 +445,7 @@ namespace BookHeaven.Views
         {
             if (string.IsNullOrWhiteSpace(txtId.Text))
             {
-                MessageBox.Show("Please select a supplier to update.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please choose a supplier to update the information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -468,7 +470,7 @@ namespace BookHeaven.Views
                 }
 
                 await supplierService.UpdateSupplierAsync(supplier);
-                MessageBox.Show("Supplier updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Supplier information updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 await LoadSuppliers();
                 ClearTextBoxes();
             }
@@ -509,14 +511,14 @@ namespace BookHeaven.Views
                 }
                 await supplierService.DeleteSupplierAsync(id);
 
-                MessageBox.Show("Supplier deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Supplier information deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 await LoadSuppliers();
                 ClearTextBoxes();
             }
             else
             {
-                MessageBox.Show("Supplier not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Supplier not found in the system.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -527,7 +529,7 @@ namespace BookHeaven.Views
             this.Hide();
         }
 
-       
+
 
         private async void btnAddBookSupplier(object sender, EventArgs e)
         {
@@ -569,5 +571,7 @@ namespace BookHeaven.Views
             ClearTextBoxes();
 
         }
+
+       
     }
 }

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             btnBestSelling = new Button();
             Inventory = new Button();
             btnBestcustomer = new Button();
@@ -84,28 +84,28 @@
             // 
             // dgvReports
             // 
-            dataGridViewCellStyle7.BackColor = Color.LightBlue;
-            dgvReports.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = Color.LightBlue;
+            dgvReports.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvReports.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvReports.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvReports.BackgroundColor = SystemColors.Window;
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = Color.LightGray;
-            dataGridViewCellStyle8.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            dgvReports.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.LightGray;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvReports.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvReports.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = SystemColors.Window;
-            dataGridViewCellStyle9.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle9.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
-            dgvReports.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvReports.DefaultCellStyle = dataGridViewCellStyle3;
             dgvReports.Location = new Point(119, 276);
             dgvReports.Name = "dgvReports";
             dgvReports.RowHeadersWidth = 51;
@@ -113,7 +113,6 @@
             dgvReports.Size = new Size(766, 186);
             dgvReports.TabIndex = 9;
             dgvReports.Visible = false;
-           
             // 
             // labelName
             // 
@@ -125,7 +124,6 @@
             labelName.TabIndex = 10;
             labelName.Text = "Reports";
             labelName.TextAlign = ContentAlignment.MiddleCenter;
-            
             // 
             // btnBack
             // 
@@ -149,7 +147,7 @@
             btnDownload.Name = "btnDownload";
             btnDownload.Size = new Size(127, 43);
             btnDownload.TabIndex = 12;
-            btnDownload.Text = "Download";
+            btnDownload.Text = "Export";
             btnDownload.UseVisualStyleBackColor = false;
             btnDownload.Click += btnDownload_Click;
             // 
@@ -179,6 +177,7 @@
             Controls.Add(dgvReports);
             Controls.Add(pictureBox1);
             Name = "Reports";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Reports";
             ((System.ComponentModel.ISupportInitialize)dgvReports).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

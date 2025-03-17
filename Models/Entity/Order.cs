@@ -10,7 +10,7 @@ namespace BookHeaven.Models.Entity
         public virtual Customer? Customer { get; set; }
 
         public List<OrderItem> Items { get; set; } = new List<OrderItem>();
-        public string? Status { get; set; } // "Pending", "Completed"
+        public string? Status { get; set; } 
         public DateTime OrderDate { get; set; }
         public bool? IsDelivery { get; set; }
         public decimal Total { get; set; }

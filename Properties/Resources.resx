@@ -127,10 +127,13 @@
   <data name="Bookshop-cuate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bookshop-cuate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Report-cuate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Report-cuate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Bookshop-rafiki1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bookshop-rafiki1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Report-cuate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Report-cuate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrow-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -132,3 +132,4 @@ C:\Users\Sama\source\repos\BookHaven\BookHaven\obj\Debug\net8.0-windows\refint\B
 C:\Users\Sama\source\repos\BookHaven\BookHaven\obj\Debug\net8.0-windows\BookHaven.pdb
 C:\Users\Sama\source\repos\BookHaven\BookHaven\obj\Debug\net8.0-windows\BookHaven.genruntimeconfig.cache
 C:\Users\Sama\source\repos\BookHaven\BookHaven\obj\Debug\net8.0-windows\ref\BookHaven.dll
+C:\Users\Sama\source\repos\BookHaven\BookHaven\obj\Debug\net8.0-windows\BookHaven.sourcelink.json

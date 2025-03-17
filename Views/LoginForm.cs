@@ -67,7 +67,7 @@ namespace BookHeaven.Views
             }
             else
             {
-                lblError.Text = "Invalid email or password.";
+                lblError.Text = "Invalid username or password.";
             }
 
         }

@@ -111,6 +111,8 @@ namespace BookHeaven.Views
             // 
             // txtDate
             // 
+            txtDate.BackColor = SystemColors.Window;
+            txtDate.ForeColor = SystemColors.Window;
             txtDate.Location = new Point(269, 164);
             txtDate.Name = "txtDate";
             txtDate.ReadOnly = true;
@@ -119,6 +121,8 @@ namespace BookHeaven.Views
             // 
             // txtTotal
             // 
+            txtTotal.BackColor = SystemColors.Window;
+            txtTotal.ForeColor = SystemColors.Window;
             txtTotal.Location = new Point(490, 164);
             txtTotal.Name = "txtTotal";
             txtTotal.ReadOnly = true;
@@ -162,6 +166,8 @@ namespace BookHeaven.Views
             // 
             // txtId
             // 
+            txtId.BackColor = SystemColors.Window;
+            txtId.ForeColor = SystemColors.Window;
             txtId.Location = new Point(44, 164);
             txtId.Name = "txtId";
             txtId.ReadOnly = true;
@@ -277,8 +283,9 @@ namespace BookHeaven.Views
             // cmbStatus
             // 
             cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbStatus.ForeColor = SystemColors.Window;
             cmbStatus.FormattingEnabled = true;
-            cmbStatus.Items.AddRange(new object[] { "Pending", "Completed", "" });
+            cmbStatus.Items.AddRange(new object[] { "Pending", "Processing", "Shipped", "Completed" });
             cmbStatus.Location = new Point(44, 246);
             cmbStatus.Name = "cmbStatus";
             cmbStatus.Size = new Size(190, 28);
@@ -297,6 +304,8 @@ namespace BookHeaven.Views
             // 
             // txtDiscount
             // 
+            txtDiscount.BackColor = SystemColors.Window;
+            txtDiscount.ForeColor = SystemColors.Window;
             txtDiscount.Location = new Point(716, 164);
             txtDiscount.Name = "txtDiscount";
             txtDiscount.ReadOnly = true;
@@ -306,7 +315,7 @@ namespace BookHeaven.Views
             // btnBack
             // 
             btnBack.BackColor = Color.CornflowerBlue;
-            btnBack.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBack.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnBack.ForeColor = SystemColors.Window;
             btnBack.Location = new Point(822, 555);
             btnBack.Name = "btnBack";
@@ -335,7 +344,9 @@ namespace BookHeaven.Views
             Controls.Add(txtTotal);
             Controls.Add(txtDate);
             Controls.Add(dataGridView);
+            Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "SalesForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Book List";
             Load += SalesForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
@@ -365,24 +376,6 @@ namespace BookHeaven.Views
             }
         }
 
-
-        //private async void dataGridViewSuppliers_CellClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    var orderId = (Guid)dataGridViewSales.Rows[e.RowIndex].Cells["colId"].Value;
-        //    if (e.RowIndex >= 0 && e.ColumnIndex == dataGridViewSales.Columns["colBooks"].Index)
-        //    {
-        //        LoadBooksForSupplier(supplierId);
-        //    }
-        //    if (e.RowIndex >= 0 && e.ColumnIndex == dataGridViewSales.Columns["colDelete"].Index) {
-        //        await DeleteSupplier(supplierId);
-        //    }
-        //    else{
-        //        var selectedRow = dataGridViewSales.Rows[e.RowIndex];
-        //        txtId.Text = selectedRow.Cells["colId"].Value.ToString();
-        //        txtName.Text = selectedRow.Cells["colName"].Value.ToString();
-        //        txtContact.Text = selectedRow.Cells["colContact"].Value.ToString();
-        //    }
-        //}
 
         private async void dataGridViewSuppliers_CellClick(object sender, DataGridViewCellEventArgs e)
         {

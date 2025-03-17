@@ -48,7 +48,7 @@
             btnEmployeeManagement.ForeColor = SystemColors.Window;
             btnEmployeeManagement.Location = new Point(0, 252);
             btnEmployeeManagement.Name = "btnEmployeeManagement";
-            btnEmployeeManagement.Size = new Size(295, 62);
+            btnEmployeeManagement.Size = new Size(226, 62);
             btnEmployeeManagement.TabIndex = 0;
             btnEmployeeManagement.Text = "Employee Management";
             btnEmployeeManagement.TextAlign = ContentAlignment.MiddleLeft;
@@ -60,9 +60,9 @@
             btnBookInventory.BackColor = SystemColors.MenuHighlight;
             btnBookInventory.Font = new Font("Arial Rounded MT Bold", 10.2F);
             btnBookInventory.ForeColor = SystemColors.Window;
-            btnBookInventory.Location = new Point(0, 87);
+            btnBookInventory.Location = new Point(0, 85);
             btnBookInventory.Name = "btnBookInventory";
-            btnBookInventory.Size = new Size(295, 62);
+            btnBookInventory.Size = new Size(226, 62);
             btnBookInventory.TabIndex = 1;
             btnBookInventory.Text = "Book Inventory";
             btnBookInventory.TextAlign = ContentAlignment.MiddleLeft;
@@ -76,7 +76,7 @@
             btnCustomerManagement.ForeColor = SystemColors.Window;
             btnCustomerManagement.Location = new Point(0, 139);
             btnCustomerManagement.Name = "btnCustomerManagement";
-            btnCustomerManagement.Size = new Size(295, 62);
+            btnCustomerManagement.Size = new Size(226, 62);
             btnCustomerManagement.TabIndex = 2;
             btnCustomerManagement.Text = "Customer Management";
             btnCustomerManagement.TextAlign = ContentAlignment.MiddleLeft;
@@ -90,7 +90,7 @@
             btnSalesTransactions.ForeColor = SystemColors.Window;
             btnSalesTransactions.Location = new Point(0, 364);
             btnSalesTransactions.Name = "btnSalesTransactions";
-            btnSalesTransactions.Size = new Size(295, 62);
+            btnSalesTransactions.Size = new Size(226, 62);
             btnSalesTransactions.TabIndex = 3;
             btnSalesTransactions.Text = "Sales Transactions";
             btnSalesTransactions.TextAlign = ContentAlignment.MiddleLeft;
@@ -102,9 +102,9 @@
             btnOrdersManagement.BackColor = SystemColors.MenuHighlight;
             btnOrdersManagement.Font = new Font("Arial Rounded MT Bold", 10.2F);
             btnOrdersManagement.ForeColor = SystemColors.Window;
-            btnOrdersManagement.Location = new Point(0, 307);
+            btnOrdersManagement.Location = new Point(0, 306);
             btnOrdersManagement.Name = "btnOrdersManagement";
-            btnOrdersManagement.Size = new Size(295, 62);
+            btnOrdersManagement.Size = new Size(226, 62);
             btnOrdersManagement.TabIndex = 4;
             btnOrdersManagement.Text = "Order Management";
             btnOrdersManagement.TextAlign = ContentAlignment.MiddleLeft;
@@ -118,7 +118,7 @@
             btnSupplierManagement.ForeColor = SystemColors.Window;
             btnSupplierManagement.Location = new Point(0, 198);
             btnSupplierManagement.Name = "btnSupplierManagement";
-            btnSupplierManagement.Size = new Size(295, 62);
+            btnSupplierManagement.Size = new Size(226, 62);
             btnSupplierManagement.TabIndex = 5;
             btnSupplierManagement.Text = "Supplier Management";
             btnSupplierManagement.TextAlign = ContentAlignment.MiddleLeft;
@@ -132,7 +132,7 @@
             btnReport.ForeColor = SystemColors.Window;
             btnReport.Location = new Point(0, 419);
             btnReport.Name = "btnReport";
-            btnReport.Size = new Size(295, 62);
+            btnReport.Size = new Size(226, 62);
             btnReport.TabIndex = 6;
             btnReport.Text = "Reports";
             btnReport.TextAlign = ContentAlignment.MiddleLeft;
@@ -146,7 +146,7 @@
             btnLogOut.ForeColor = SystemColors.Window;
             btnLogOut.Location = new Point(0, 474);
             btnLogOut.Name = "btnLogOut";
-            btnLogOut.Size = new Size(295, 60);
+            btnLogOut.Size = new Size(226, 60);
             btnLogOut.TabIndex = 7;
             btnLogOut.Text = "Logout";
             btnLogOut.UseVisualStyleBackColor = false;
@@ -155,9 +155,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = BookHaven.Properties.Resources.Revenue_cuate;
-            pictureBox1.Location = new Point(287, 71);
+            pictureBox1.Location = new Point(157, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(614, 463);
+            pictureBox1.Size = new Size(744, 532);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
@@ -188,7 +188,9 @@
             Controls.Add(btnBookInventory);
             Controls.Add(btnEmployeeManagement);
             Controls.Add(pictureBox1);
+            MaximizeBox = false;
             Name = "AdminDashboardForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AdminDashboardForm";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

@@ -76,7 +76,7 @@
             lblSubTitle.AutoSize = true;
             lblSubTitle.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             lblSubTitle.ForeColor = Color.DimGray;
-            lblSubTitle.Location = new Point(566, 137);
+            lblSubTitle.Location = new Point(571, 171);
             lblSubTitle.Name = "lblSubTitle";
             lblSubTitle.Size = new Size(182, 23);
             lblSubTitle.TabIndex = 5;
@@ -88,7 +88,7 @@
             pictureBox1.Image = BookHaven.Properties.Resources.Bookshop_cuate;
             pictureBox1.Location = new Point(-2, -3);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(500, 522);
+            pictureBox1.Size = new Size(500, 519);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -96,9 +96,9 @@
             // label1
             // 
             label1.Font = new Font("Arial Rounded MT Bold", 25.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(502, 87);
+            label1.Location = new Point(504, 121);
             label1.Name = "label1";
-            label1.Size = new Size(288, 50);
+            label1.Size = new Size(297, 50);
             label1.TabIndex = 7;
             label1.Text = "BookHaven";
             label1.TextAlign = ContentAlignment.TopCenter;

@@ -44,7 +44,7 @@ namespace BookHeaven.Views
 
         private void LoadOrderStatus()
         {
-            string[] statuses = { "Pending", "Completed" };
+            string[] statuses = { "Pending","Processing","Shipped", "Completed",  };
             cmbStatus.Items.AddRange(statuses);
             cmbStatus.SelectedItem = "Completed";
             _currentOrder.Status = cmbStatus.SelectedItem.ToString();
@@ -297,7 +297,7 @@ namespace BookHeaven.Views
             {
                 await _orderService.PlaceOrderAsync(_currentOrder);
                 MessageBox.Show("Order placed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ReceiptGenerator.GenerateReceipt(_currentOrder);
+                Receipt.GenerateReceipt(_currentOrder);
                 _orderItems.Clear();
                 InitializeOrder();
                 ClearTextFields();

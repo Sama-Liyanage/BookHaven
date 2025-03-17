@@ -33,12 +33,11 @@ namespace BookHeaven.Views
         private void InitializeComponent()
         {
             dataGridViewBooks = new DataGridView();
-            // DataGridView column definitions
             colId = new DataGridViewTextBoxColumn();
             colTitle = new DataGridViewTextBoxColumn();
             colAuthor = new DataGridViewTextBoxColumn();
-            colGenre = new DataGridViewTextBoxColumn();
             colISBN = new DataGridViewTextBoxColumn();
+            colGenre = new DataGridViewTextBoxColumn();
             colPrice = new DataGridViewTextBoxColumn();
             colQuantity = new DataGridViewTextBoxColumn();
             colDelete = new DataGridViewButtonColumn();
@@ -62,63 +61,74 @@ namespace BookHeaven.Views
             btnBack = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewBooks).BeginInit();
             SuspendLayout();
-
-            // DataGridView properties
+            // 
+            // dataGridViewBooks
+            // 
             dataGridViewBooks.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewBooks.BackgroundColor = SystemColors.ButtonHighlight;
+            dataGridViewBooks.BackgroundColor = SystemColors.Window;
+            dataGridViewBooks.BorderStyle = BorderStyle.None;
             dataGridViewBooks.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewBooks.Columns.AddRange(new DataGridViewColumn[] { colId, colTitle, colAuthor, colGenre, colISBN, colPrice, colQuantity, colDelete });
-            dataGridViewBooks.Location = new Point(18, 317);
+            dataGridViewBooks.Columns.AddRange(new DataGridViewColumn[] { colId, colTitle, colAuthor, colISBN, colGenre, colPrice, colQuantity, colDelete });
+            dataGridViewBooks.Location = new Point(28, 317);
             dataGridViewBooks.Name = "dataGridViewBooks";
             dataGridViewBooks.RowHeadersWidth = 51;
             dataGridViewBooks.Size = new Size(913, 157);
             dataGridViewBooks.TabIndex = 0;
             dataGridViewBooks.CellClick += dataGridViewBooks_CellClick;
-           
-            // colId 
+            // 
+            // colId
+            // 
             colId.HeaderText = "Id";
             colId.MinimumWidth = 6;
             colId.Name = "colId";
             colId.ReadOnly = true;
-            
+            // 
             // colTitle
+            // 
             colTitle.HeaderText = "Title";
             colTitle.MinimumWidth = 6;
             colTitle.Name = "colTitle";
-             
+            // 
             // colAuthor
+            // 
             colAuthor.HeaderText = "Author";
             colAuthor.MinimumWidth = 6;
             colAuthor.Name = "colAuthor";
-        
-            // colGenre
-            colGenre.HeaderText = "Genre";
-            colGenre.MinimumWidth = 6;
-            colGenre.Name = "colGenre";
-            
-            // colISBN 
+            // 
+            // colISBN
+            // 
             colISBN.HeaderText = "ISBN";
             colISBN.MinimumWidth = 6;
             colISBN.Name = "colISBN";
-            
-            // colPrice 
+            // 
+            // colGenre
+            // 
+            colGenre.HeaderText = "Genre";
+            colGenre.MinimumWidth = 6;
+            colGenre.Name = "colGenre";
+            // 
+            // colPrice
+            // 
             colPrice.HeaderText = "Price";
             colPrice.MinimumWidth = 6;
             colPrice.Name = "colPrice";
-            
-            // colQuantity 
+            // 
+            // colQuantity
+            // 
             colQuantity.HeaderText = "Quantity";
             colQuantity.MinimumWidth = 6;
             colQuantity.Name = "colQuantity";
-          
+            // 
             // colDelete
+            // 
             colDelete.HeaderText = "Delete";
             colDelete.MinimumWidth = 6;
             colDelete.Name = "colDelete";
             colDelete.Text = "Delete";
             colDelete.UseColumnTextForButtonValue = true;
-            
-            // btnAddBook 
+            // 
+            // btnAddBook
+            // 
             btnAddBook.BackColor = Color.Green;
             btnAddBook.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAddBook.ForeColor = SystemColors.Window;
@@ -129,47 +139,54 @@ namespace BookHeaven.Views
             btnAddBook.Text = "Add ";
             btnAddBook.UseVisualStyleBackColor = false;
             btnAddBook.Click += btnAddBook_Click;
-            
-            // txtTitle 
+            // 
+            // txtTitle
+            // 
             txtTitle.Location = new Point(260, 110);
             txtTitle.Name = "txtTitle";
             txtTitle.Size = new Size(200, 27);
             txtTitle.TabIndex = 3;
             txtTitle.TextChanged += txtTitle_TextChanged;
-             
-            // txtAuthor 
+            // 
+            // txtAuthor
+            // 
             txtAuthor.Location = new Point(492, 110);
             txtAuthor.Name = "txtAuthor";
             txtAuthor.Size = new Size(200, 27);
             txtAuthor.TabIndex = 4;
-            
-            // txtGenre 
-            txtGenre.Location = new Point(731, 110);
+            // 
+            // txtGenre
+            // 
+            txtGenre.Location = new Point(28, 190);
             txtGenre.Name = "txtGenre";
             txtGenre.Size = new Size(200, 27);
             txtGenre.TabIndex = 5;
-            
-            // txtISBN 
-            txtISBN.Location = new Point(28, 190);
+            // 
+            // txtISBN
+            // 
+            txtISBN.Location = new Point(731, 110);
             txtISBN.Name = "txtISBN";
             txtISBN.Size = new Size(200, 27);
             txtISBN.TabIndex = 6;
-          
-            // txtPrice 
+            // 
+            // txtPrice
+            // 
             txtPrice.Location = new Point(260, 190);
             txtPrice.Name = "txtPrice";
             txtPrice.Size = new Size(200, 27);
             txtPrice.TabIndex = 7;
             txtPrice.TextChanged += txtPrice_TextChanged;
-      
+            // 
             // txtQuantity
+            // 
             txtQuantity.Location = new Point(492, 190);
             txtQuantity.Name = "txtQuantity";
             txtQuantity.Size = new Size(200, 27);
             txtQuantity.TabIndex = 8;
             txtQuantity.TextChanged += txtQuantity_TextChanged;
-            
-            // label1 
+            // 
+            // label1
+            // 
             label1.Font = new Font("Arial Rounded MT Bold", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(232, 9);
             label1.Name = "label1";
@@ -177,8 +194,9 @@ namespace BookHeaven.Views
             label1.TabIndex = 9;
             label1.Text = "Book Management";
             label1.TextAlign = ContentAlignment.TopCenter;
-          
+            // 
             // lblTitle
+            // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblTitle.Location = new Point(260, 87);
@@ -186,8 +204,9 @@ namespace BookHeaven.Views
             lblTitle.Size = new Size(46, 20);
             lblTitle.TabIndex = 10;
             lblTitle.Text = "Title";
-          
+            // 
             // lblAuthor
+            // 
             lblAuthor.AutoSize = true;
             lblAuthor.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblAuthor.Location = new Point(492, 87);
@@ -195,26 +214,29 @@ namespace BookHeaven.Views
             lblAuthor.Size = new Size(64, 20);
             lblAuthor.TabIndex = 11;
             lblAuthor.Text = "Author";
-          
+            // 
             // lblGenre
+            // 
             lblGenre.AutoSize = true;
             lblGenre.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblGenre.Location = new Point(731, 87);
+            lblGenre.Location = new Point(28, 167);
             lblGenre.Name = "lblGenre";
             lblGenre.Size = new Size(59, 20);
             lblGenre.TabIndex = 12;
             lblGenre.Text = "Genre";
-           
+            // 
             // lblISBN
+            // 
             lblISBN.AutoSize = true;
             lblISBN.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblISBN.Location = new Point(34, 167);
+            lblISBN.Location = new Point(737, 87);
             lblISBN.Name = "lblISBN";
             lblISBN.Size = new Size(50, 20);
             lblISBN.TabIndex = 13;
             lblISBN.Text = "ISBN";
-           
+            // 
             // lblPrice
+            // 
             lblPrice.AutoSize = true;
             lblPrice.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblPrice.Location = new Point(260, 167);
@@ -222,8 +244,9 @@ namespace BookHeaven.Views
             lblPrice.Size = new Size(52, 20);
             lblPrice.TabIndex = 14;
             lblPrice.Text = "Price";
-           
+            // 
             // lblQty
+            // 
             lblQty.AutoSize = true;
             lblQty.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblQty.Location = new Point(492, 167);
@@ -231,8 +254,9 @@ namespace BookHeaven.Views
             lblQty.Size = new Size(72, 20);
             lblQty.TabIndex = 15;
             lblQty.Text = "Quanity";
-             
+            // 
             // btnUpdate
+            // 
             btnUpdate.BackColor = SystemColors.Highlight;
             btnUpdate.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnUpdate.ForeColor = SystemColors.Window;
@@ -243,16 +267,18 @@ namespace BookHeaven.Views
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = false;
             btnUpdate.Click += btnUpdateClick;
-             
+            // 
             // txtId
+            // 
             txtId.Location = new Point(28, 110);
             txtId.Name = "txtId";
             txtId.ReadOnly = true;
             txtId.Size = new Size(200, 27);
             txtId.TabIndex = 17;
             txtId.TextChanged += txtId_TextChanged;
-          
+            // 
             // lblId
+            // 
             lblId.AutoSize = true;
             lblId.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblId.Location = new Point(28, 87);
@@ -260,10 +286,11 @@ namespace BookHeaven.Views
             lblId.Size = new Size(25, 20);
             lblId.TabIndex = 18;
             lblId.Text = "Id";
-           
-            // btnBack 
+            // 
+            // btnBack
+            // 
             btnBack.BackColor = Color.CornflowerBlue;
-            btnBack.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBack.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBack.ForeColor = SystemColors.Window;
             btnBack.Location = new Point(804, 525);
             btnBack.Name = "btnBack";
@@ -272,8 +299,9 @@ namespace BookHeaven.Views
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnBack_Click;
-         
-            // BookForm 
+            // 
+            // BookForm
+            // 
             BackColor = SystemColors.Window;
             ClientSize = new Size(989, 608);
             Controls.Add(btnBack);
@@ -295,7 +323,10 @@ namespace BookHeaven.Views
             Controls.Add(txtTitle);
             Controls.Add(btnAddBook);
             Controls.Add(dataGridViewBooks);
+            Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            MaximizeBox = false;
             Name = "BookForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Book List";
             Load += BookForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewBooks).EndInit();
@@ -303,7 +334,7 @@ namespace BookHeaven.Views
             PerformLayout();
         }
 
-   
+
 
         // Method to clear textboxes after an operation
         private void clearTextBoxes()

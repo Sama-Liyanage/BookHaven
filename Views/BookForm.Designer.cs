@@ -95,7 +95,7 @@ namespace BookHeaven.Views
                 // Refresh book list after adding a new book
                 BookForm_Load(sender, e);
 
-                MessageBox.Show("Book added successfully!");
+                MessageBox.Show("The book has been successfully added.");
                 clearTextBoxes();
             }
             catch (Exception ex)
@@ -118,7 +118,7 @@ namespace BookHeaven.Views
                     // Refresh book list after deletion
                     BookForm_Load(this, EventArgs.Empty);
 
-                    MessageBox.Show("Book deleted successfully!");
+                    MessageBox.Show("The book has been deleted successfully.");
                 }
                 catch (Exception ex)
                 {
@@ -127,7 +127,7 @@ namespace BookHeaven.Views
             }
             else
             {
-                MessageBox.Show("Book not found!");
+                MessageBox.Show("The book could not be found.");
             }
         }
 
@@ -142,14 +142,14 @@ namespace BookHeaven.Views
         private Label lblQty;
         private Button btnUpdate;
         private TextBox txtId;
+        private Button btnBack;
         private DataGridViewTextBoxColumn colId;
         private DataGridViewTextBoxColumn colTitle;
         private DataGridViewTextBoxColumn colAuthor;
-        private DataGridViewTextBoxColumn colGenre;
         private DataGridViewTextBoxColumn colISBN;
+        private DataGridViewTextBoxColumn colGenre;
         private DataGridViewTextBoxColumn colPrice;
         private DataGridViewTextBoxColumn colQuantity;
         private DataGridViewButtonColumn colDelete;
-        private Button btnBack;
     }
 }

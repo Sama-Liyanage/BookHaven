@@ -29,7 +29,6 @@ namespace BookHeaven.Views
 
         private void InitializeComponent()
         {
-            // Initialize UI components for customer management
             dataGridViewCustomers = new DataGridView();
             colId = new DataGridViewTextBoxColumn();
             colName = new DataGridViewTextBoxColumn();
@@ -50,8 +49,9 @@ namespace BookHeaven.Views
             btnBack = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewCustomers).BeginInit();
             SuspendLayout();
-
-            // Set up the data grid view for displaying customer details
+            // 
+            // dataGridViewCustomers
+            // 
             dataGridViewCustomers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCustomers.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridViewCustomers.BorderStyle = BorderStyle.None;
@@ -63,36 +63,42 @@ namespace BookHeaven.Views
             dataGridViewCustomers.Size = new Size(744, 146);
             dataGridViewCustomers.TabIndex = 0;
             dataGridViewCustomers.CellClick += dataGridViewCustomers_CellClick;
-
-            // Define the columns of the data grid view
+            // 
+            // colId
+            // 
             colId.HeaderText = "Id";
             colId.MinimumWidth = 6;
             colId.Name = "colId";
             colId.ReadOnly = true;
-             
-            // colName 
+            // 
+            // colName
+            // 
             colName.HeaderText = "Name";
             colName.MinimumWidth = 6;
             colName.Name = "colName";
-            
+            // 
             // colEmail
+            // 
             colEmail.HeaderText = "Email";
             colEmail.MinimumWidth = 6;
             colEmail.Name = "colEmail";
-             
+            // 
             // colContact
+            // 
             colContact.HeaderText = "Conatct No";
             colContact.MinimumWidth = 6;
             colContact.Name = "colContact";
-            
-            // colDelete 
+            // 
+            // colDelete
+            // 
             colDelete.HeaderText = "Delete";
             colDelete.MinimumWidth = 6;
             colDelete.Name = "colDelete";
             colDelete.Text = "Delete";
             colDelete.UseColumnTextForButtonValue = true;
-
-            // Set up the Add Customer button
+            // 
+            // btnAddCustomer
+            // 
             btnAddCustomer.BackColor = Color.FromArgb(40, 167, 69);
             btnAddCustomer.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAddCustomer.ForeColor = SystemColors.Window;
@@ -103,29 +109,31 @@ namespace BookHeaven.Views
             btnAddCustomer.Text = "Add";
             btnAddCustomer.UseVisualStyleBackColor = false;
             btnAddCustomer.Click += btnAddClick;
-
-            // Initialize text boxes for customer details
+            // 
             // txtName
+            // 
             txtName.Location = new Point(386, 133);
             txtName.Name = "txtName";
             txtName.Size = new Size(200, 27);
             txtName.TabIndex = 3;
-        
+            // 
             // txtEmail
+            // 
             txtEmail.Location = new Point(660, 133);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(200, 27);
             txtEmail.TabIndex = 4;
             txtEmail.TextChanged += txtAuthor_TextChanged;
-           
-            // txtContact 
+            // 
+            // txtContact
+            // 
             txtContact.Location = new Point(129, 220);
             txtContact.Name = "txtContact";
             txtContact.Size = new Size(200, 27);
             txtContact.TabIndex = 5;
-
-            // Set up labels for customer form fields
-            // lblCustomer 
+            // 
+            // lblCustomer
+            // 
             lblCustomer.Font = new Font("Arial Rounded MT Bold", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblCustomer.Location = new Point(227, 21);
             lblCustomer.Name = "lblCustomer";
@@ -133,8 +141,9 @@ namespace BookHeaven.Views
             lblCustomer.TabIndex = 9;
             lblCustomer.Text = "Customer Management";
             lblCustomer.TextAlign = ContentAlignment.TopCenter;
-             
-            // lblConatct 
+            // 
+            // lblConatct
+            // 
             lblConatct.AutoSize = true;
             lblConatct.Font = new Font("Arial Rounded MT Bold", 10.2F);
             lblConatct.Location = new Point(132, 197);
@@ -142,8 +151,9 @@ namespace BookHeaven.Views
             lblConatct.Size = new Size(101, 20);
             lblConatct.TabIndex = 12;
             lblConatct.Text = "Contact No";
-
-            // Set up the Update Customer button
+            // 
+            // btnUpdateCustomer
+            // 
             btnUpdateCustomer.BackColor = SystemColors.Highlight;
             btnUpdateCustomer.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnUpdateCustomer.ForeColor = SystemColors.Window;
@@ -154,16 +164,17 @@ namespace BookHeaven.Views
             btnUpdateCustomer.Text = "Update";
             btnUpdateCustomer.UseVisualStyleBackColor = false;
             btnUpdateCustomer.Click += btnUpdateClick;
-
-            // Set up text box for customer Id
+            // 
             // txtId
+            // 
             txtId.Location = new Point(129, 133);
             txtId.Name = "txtId";
             txtId.ReadOnly = true;
             txtId.Size = new Size(200, 27);
             txtId.TabIndex = 17;
-            
-            // lblId 
+            // 
+            // lblId
+            // 
             lblId.AutoSize = true;
             lblId.Font = new Font("Arial Rounded MT Bold", 10.2F);
             lblId.Location = new Point(129, 110);
@@ -171,8 +182,9 @@ namespace BookHeaven.Views
             lblId.Size = new Size(25, 20);
             lblId.TabIndex = 18;
             lblId.Text = "Id";
-           
+            // 
             // lblName
+            // 
             lblName.AutoSize = true;
             lblName.Font = new Font("Arial Rounded MT Bold", 10.2F);
             lblName.Location = new Point(389, 110);
@@ -180,17 +192,19 @@ namespace BookHeaven.Views
             lblName.Size = new Size(57, 20);
             lblName.TabIndex = 19;
             lblName.Text = "Name";
-            
-            // lblEmail 
+            // 
+            // lblEmail
+            // 
             lblEmail.AutoSize = true;
             lblEmail.Font = new Font("Arial Rounded MT Bold", 10.2F);
             lblEmail.Location = new Point(663, 110);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(55, 20);
             lblEmail.TabIndex = 20;
-            lblEmail.Text = "Email";  
-
-            // Set up the Back button
+            lblEmail.Text = "Email";
+            // 
+            // btnBack
+            // 
             btnBack.BackColor = Color.CornflowerBlue;
             btnBack.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBack.ForeColor = SystemColors.Window;
@@ -201,8 +215,9 @@ namespace BookHeaven.Views
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnBack_Click;
-            
-            // CustomerForm 
+            // 
+            // CustomerForm
+            // 
             BackColor = SystemColors.Window;
             ClientSize = new Size(989, 608);
             Controls.Add(btnBack);
@@ -218,6 +233,7 @@ namespace BookHeaven.Views
             Controls.Add(txtName);
             Controls.Add(btnAddCustomer);
             Controls.Add(dataGridViewCustomers);
+            Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "CustomerForm";
             Text = "Customer List";
             Load += CustomerForm_Load;
@@ -265,66 +281,66 @@ namespace BookHeaven.Views
 
         }
 
-       
+
 
 
         // Validate the inputs before submitting
         private bool ValidateInputs()
+        {
+            if (string.IsNullOrWhiteSpace(txtName.Text))
             {
-                if (string.IsNullOrWhiteSpace(txtName.Text))
-                {
-                    MessageBox.Show("Name cannot be empty", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtName.Focus();
-                    return false;
-                }
-
-                string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
-                if (!Regex.IsMatch(txtEmail.Text, emailPattern))
-                {
-                    MessageBox.Show("Invalid Email Format", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtEmail.Focus();
-                    return false;
-                }
-
-                string contactPattern = @"^\d{10}$";
-                if (!Regex.IsMatch(txtContact.Text, contactPattern))
-                {
-                    MessageBox.Show("Contact Number must be exactly 10 digits", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtContact.Focus();
-                    return false;
-                }
-
-                return true;
+                MessageBox.Show("Name cannot be empty", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtName.Focus();
+                return false;
             }
+
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            if (!Regex.IsMatch(txtEmail.Text, emailPattern))
+            {
+                MessageBox.Show("Invalid Email Format", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtEmail.Focus();
+                return false;
+            }
+
+            string contactPattern = @"^\d{10}$";
+            if (!Regex.IsMatch(txtContact.Text, contactPattern))
+            {
+                MessageBox.Show("Contact Number must be exactly 10 digits", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtContact.Focus();
+                return false;
+            }
+
+            return true;
+        }
 
 
         // Handle Add button click event
         private async void btnAddClick(object sender, EventArgs e)
-                {
-                    if (!ValidateInputs()) return; 
+        {
+            if (!ValidateInputs()) return;
 
-                    var customer = new Customer
-                    {
-                        Id = Guid.NewGuid(),
-                        Name = txtName.Text,
-                        Email = txtEmail.Text,
-                        PhoneNumber = txtContact.Text,
-                    };
+            var customer = new Customer
+            {
+                Id = Guid.NewGuid(),
+                Name = txtName.Text,
+                Email = txtEmail.Text,
+                PhoneNumber = txtContact.Text,
+            };
 
-                    try
-                    {
-                        await customerService.AddCustomer(customer);
+            try
+            {
+                await customerService.AddCustomer(customer);
 
-                        CustomerForm_Load(sender, e);
+                CustomerForm_Load(sender, e);
 
-                        MessageBox.Show("Customer added successfully!");
-                        clearTextBoxes();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Error adding Customer: {ex.Message}");
-                    }
-                }
+                MessageBox.Show("Customer added successfully!");
+                clearTextBoxes();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error adding Customer: {ex.Message}");
+            }
+        }
 
         // Handle Update button click event
         private async void btnUpdateClick(object sender, EventArgs e)

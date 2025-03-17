@@ -50,11 +50,11 @@ namespace BookHeaven.Views
         private Label lblName;
         private Label lblEmail;
         private Button btnAddCustomer;
+        private Button btnBack;
         private DataGridViewTextBoxColumn colId;
         private DataGridViewTextBoxColumn colName;
-        private DataGridViewTextBoxColumn colEmail;
         private DataGridViewTextBoxColumn colContact;
+        private DataGridViewTextBoxColumn colEmail;
         private DataGridViewButtonColumn colDelete;
-        private Button btnBack;
     }
 }

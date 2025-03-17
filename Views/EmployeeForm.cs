@@ -226,7 +226,9 @@ namespace BookHeaven.Views
             Controls.Add(txtUserName);
             Controls.Add(btnAddEmployee);
             Controls.Add(dataGridViewUsers);
+            Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "EmployeeForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Employee Form";
             Load += StaffForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).EndInit();
@@ -327,7 +329,7 @@ namespace BookHeaven.Views
             {
                 if (cmbRole.SelectedValue == null)
                 {
-                    MessageBox.Show("Please select a valid role.");
+                    MessageBox.Show("Please choose a valid role.");
                     return;
                 }
 
@@ -395,7 +397,7 @@ namespace BookHeaven.Views
                 MessageBox.Show(user.PasswordHash);
                 await userService.UpdateUserAsync(user);
 
-                MessageBox.Show("Customer updated successfully");
+                MessageBox.Show("Employee updated successfully");
                 StaffForm_Load(sender, e);
                 clearTextBoxes();
 
